@@ -1,0 +1,9 @@
+<h1>All The Activites Are Here</h1>
+@{
+        foreach(Actividad a in ViewBag.Activity)
+        {
+            <p> Title Of Activity @a.Title</p>
+            <p>Description: @a.Description</p>
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@model Actividad
+<h1>Add Activity</h1>
+<form asp-action="CreateActivity" method="post">
+    <div class="form-group">
+        <label for="Title">Name</label>
+        <input asp-for="Title" class="form-control"/>
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <input asp-for="Description" class="form-control"/>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    @* <div class="form-group">
+        <label for="Duration">Duration</label>
+        <input asp-for="Duration" class="form-control"/>
+        <span asp-validation-for="Duration" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Cordinator ">Cordinator</label>
+        <input asp-for="Cordinator " class="form-control"/>
+        <span asp-validation-for="Cordinator " class="text-danger"></span>
+    </div> *@
+    @* <div class="form-group">
+        <label for="Participants">Participants</label>
+        <input asp-for="Participants" class="form-control"/>
+        <span asp-validation-for="Participants" class="text-danger"></span>
+    </div> *@
+    <input type="submit" value="Add Activity" class="btn btn-primary">
+</form>

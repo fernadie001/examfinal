@@ -1,0 +1,35 @@
+
+
+
+<div>
+    <h1>@ViewBag.activityDetail.Title</h1>
+    <div>
+        <span>
+            Description :
+        </span>
+        <span>
+@ViewBag.activityDetail.Description
+        </span>
+    </div>
+    <div>
+        <div style="width:50%">
+Hiking Enthusiasts:
+<div>
+    @* @foreach (ActivityHistory act in ViewBag.User)
+    {
+        <p>@act.UserId</p>
+    } *@
+</div>
+        </div>
+        <div style="width:50%">
+            <h1>Become an Enthusiast:</h1>
+            <form action="/AddEnthusiast" method="POST">
+                <input type="hidden" name="ActivityId" value="@ViewBag.activityDetail.ActivityId">
+                <input type="hidden" name="UserId" value="@ViewBag.User">
+                <input type="submit" value="Add To Hobbies">
+
+                
+            </form>
+        </div>
+    </div>
+</div>

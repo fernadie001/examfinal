@@ -1,0 +1,35 @@
+
+
+
+<div class="text-center">
+    <h3>Hobbies</h3>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Enthusiasts</td>
+        </tr>
+    
+    @{
+        foreach(Actividad a in ViewBag.AllHobbies)
+        {
+            <tr>
+                <td>
+                    <p> <a href="/HobbiesDetail/@a.ActivityId">@a.Title</a></p>
+                </td>
+                <td>@a.Seller.Name</td>
+            </tr>
+        }
+    }
+    </table>
+    <a style="margin-top:20px" href="/AddActivity" class="btn btn-info">Add Activity</a>
+    <hr>
+</div>
+<style>
+    table{
+        text-align: :left;
+        border:solid;
+    }
+    td{
+        padding:5px;
+    }
+</style>
